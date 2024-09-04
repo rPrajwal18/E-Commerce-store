@@ -4,11 +4,11 @@ const Navbar = () => {
 
   return (
     <nav className="bg-primary font-poppins pt-5 pb-2 px-5 md:px-10">
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center md:text-left">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
+        <div className="text-center md:text-left mb-4 md:mb-0">
           <p className="text-xl md:text-2xl font-semibold">Product Store 🤖</p>
         </div>
-        <ul className="flex justify-center md:justify-start space-x-5 mt-4">
+        <ul className="flex justify-center space-x-5">
           <li>
             <Link
               to="/"
