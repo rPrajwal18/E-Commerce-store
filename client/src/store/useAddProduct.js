@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import axios from 'axios';
+import { baseURL } from './Urls';
 
 export const useAddProduct = create((set) => ({
     products: [],
@@ -7,7 +8,7 @@ export const useAddProduct = create((set) => ({
 
     createProduct: async (productData) => {
         try {
-            const response = await axios.post('https://easy-commerce-store.vercel.app/api/products', productData);
+            const response = await axios.post(`${baseURL}/api/products`, productData);
             const data = response.data;
             set((state) => ({ products: [...state.products, data.data] }));
             return { message: "Product created successfully", success: true };
@@ -19,7 +20,7 @@ export const useAddProduct = create((set) => ({
 
     getAllProducts: async () => {
         try {
-            const response = await axios.get('https://easy-commerce-store.vercel.app/api/products');
+            const response = await axios.get(`${baseURL}/api/products`);
             const data = response.data; 
             set({ products: data.data });
             return { message: "Data fetching complete", success: true };
@@ -31,7 +32,7 @@ export const useAddProduct = create((set) => ({
 
     deleteProduct: async (pid) => {
         try{
-            const response = await axios.delete(`https://easy-commerce-store.vercel.app/api/products/${pid}`);
+            const response = await axios.delete(`${baseURL}/api/products/${pid}`);
             const data = await response.data;
             if(!data.success) return {success: false, message: data.message};
             set(state => ({products: state.products.filter(product => product._id !== pid)}));
@@ -44,7 +45,7 @@ export const useAddProduct = create((set) => ({
 
     updateProduct: async (pid, updatedProduct) => {
         try{
-            const response = await axios.put(`https://easy-commerce-store.vercel.app/api/products/${pid}`, updatedProduct);
+            const response = await axios.put(`${baseURL}/api/products/${pid}`, updatedProduct);
             const data = await response.data;
             if(!data.success) return {success: false, message: data.message};
             set(state => ({
