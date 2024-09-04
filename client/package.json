@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+  "build": "npm run build",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
