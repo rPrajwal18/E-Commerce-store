@@ -15,7 +15,8 @@ app.use(express.json());
 
 //Cors middleware
 const corsOptions = {
-    origin: "https://easy-commerce-client.vercel.app",
+    origin: ["https://e-commerce-store-tau-snowy.vercel.app"],
+    methods: ["GET", "POST", "DELETE"],
     credentials: true
 }
 
