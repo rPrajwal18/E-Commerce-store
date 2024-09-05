@@ -19,8 +19,8 @@ function App() {
           </Routes>
         </div>
       </Router>
-      <footer className="footer bg-primary text-white text-center py-4">
-        Developed by Prajwal R
+      <footer className="footer bg-primary text-white text-center py-2">
+        Developed by Prajwal R 🚀
       </footer>
     </div>
   );
