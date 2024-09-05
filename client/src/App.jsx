@@ -19,6 +19,9 @@ function App() {
           </Routes>
         </div>
       </Router>
+      <footer className="footer">
+                Developed by Prajwal R 🚀
+      </footer>
     </div>
   );
 }

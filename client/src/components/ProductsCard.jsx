@@ -42,9 +42,7 @@ function ProductsCard({ product }) {
                     </button>
                 </div>
             </div>
-            <footer className="footer">
-                Developed by Prajwal R 🚀
-            </footer>
+            
             
         </div>
     );
