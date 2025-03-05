@@ -6,10 +6,10 @@ import ProductsCard from "../components/ProductsCard";
 const ShimmerUI = () => {
     return (
         <div className="flex flex-wrap justify-center items-center gap-4 mt-4">
-            {[...Array(6)].map((_, index) => (
+            {[...Array(3)].map((_, index) => (
                 <div
                     key={index}
-                    className="w-48 h-56 bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 animate-pulse rounded-lg"
+                    className="w-50 h-60 bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 animate-pulse rounded-lg"
                 ></div>
             ))}
         </div>
