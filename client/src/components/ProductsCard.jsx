@@ -24,7 +24,7 @@ function ProductsCard({ product }) {
     return (
         <div className="w-[320px] h-[305px] m-4 font-poppins flex flex-col gap-2 relative p-3 border border-black/10 rounded-[8px] bg-gray-800 bg-opacity-80 shadow-md overflow-hidden transform transition-transform hover:scale-105 hover:shadow-lg">
             <div className="mt-1 h-32">
-                <img src={product.image || 'https://via.placeholder.com/200x130'}  alt={product.name} className="h-[130px] w-[200px] rounded-[10px] object-cover" />
+                <img src={product.image}  alt={product.name} className="h-48 w-full rounded-[10px] object-cover" />
             </div>
             <div className="text-center pb-1">
                 <h4 className="text-[17px] my-0.5 text-white font-bold">{product.name}</h4>
